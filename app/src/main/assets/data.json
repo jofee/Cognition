@@ -1,0 +1,50 @@
+[
+  {
+    "name": "菠萝",
+    "res": "pineapple"
+  },
+  {
+    "name": "胡萝卜",
+    "res": "carrot"
+  },
+  {
+    "name": "火龙果",
+    "res": "pitaya"
+  },
+  {
+    "name": "剪刀",
+    "res": "scissors"
+  },
+  {
+    "name": "猕猴桃",
+    "res": "kiwi"
+  },
+  {
+    "name": "茄子",
+    "res": "kiwi"
+  },
+  {
+    "name": "桃子",
+    "res": "peach"
+  },
+  {
+    "name": "西瓜",
+    "res": "watermelon"
+  },
+  {
+    "name": "香蕉",
+    "res": "banana"
+  },
+  {
+    "name": "钥匙",
+    "res": "key"
+  },
+  {
+    "name": "樱桃",
+    "res": "cherry"
+  },
+  {
+    "name": "自行车",
+    "res": "bicycle"
+  }
+]
