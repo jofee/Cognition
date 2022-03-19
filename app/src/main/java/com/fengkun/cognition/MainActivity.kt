@@ -15,13 +15,14 @@ private lateinit var bingding: ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var randomProductList: ArrayList<Product>
+    var answer: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bingding = ActivityMainBinding.inflate(layoutInflater)
         val view = bingding.root
         setContentView(view)
-        bingding.name.text = "胡萝卜"
+
         init()
     }
 
@@ -37,13 +38,18 @@ class MainActivity : AppCompatActivity() {
         bingding.recyclerView.layoutManager = layoutManager;
         val adapter = ProductAdapter(randomProductList)
         adapter.itemClickListener = {
+            //判断是否正确
+            //刷新
             if (dataList.size < 3)
                 dataList = gson.fromJson(datastr, object : TypeToken<ArrayList<Product>>() {}.type)
             adapter.productList = getThreeRandomProduct(dataList)
             adapter.notifyDataSetChanged()
+            answer=(0..2).random()
+            bingding.name.text = adapter.productList[answer].name
         }
         bingding.recyclerView.adapter = adapter
-
+        answer=(0..2).random()
+        bingding.name.text = adapter.productList[answer].name
 
     }
 
